@@ -1,0 +1,50 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+<title>Receitas - Foodfy</title>
+<link rel="stylesheet" href="styles.css">
+
+{% endblock %}
+
+{% block content %}
+
+        <div class="mostviewed-receita">
+            
+            <div class="viewed">
+                {% for item in items%}
+                <div class="viewed-card" id={{item.id}}>
+                    <img src= "{{item.image}}" alt="{{item.title}}">
+                    <h1>{{item.title}}</h1>
+                    <p>por {{item.author}}</p>
+                </div>
+
+                {% endfor %}
+
+                {% for item in items%}
+                <div class="viewed-card" id={{item.id}}>
+                    <img src= "{{item.image}}" alt="{{item.title}}">
+                    <h1>{{item.title}}</h1>
+                    <p>por {{item.author}}</p>
+                </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+        <div class="modaloverlay">
+            <div class="modal" >
+                <img src="" >
+                <h1></h1>
+                <p></p>
+                <form class="close-modal">
+                    <input type="text">
+                    <button type="submit">Fechar Modal</button>
+                </form>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+{% endblock %}
+        
+        
+            
